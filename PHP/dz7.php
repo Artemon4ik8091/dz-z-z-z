@@ -1,21 +1,48 @@
+<?php
 for ($i = 0; $i < 100; $i++) {
     echo "Hello World\n";
-}for ($i = 0; $i < 100; $i++) {
-    echo "Hello World\n";
-}for ($i = 0; $i < 100; $i++) {
-    echo "Hello World\n";
-}for ($i = 0; $i < 100; $i++) {
-    echo "Hello World\n";
-}for ($i = 0; $i < 100; $i++) {
-    echo "Hello World\n";
-}for ($i = 0; $i < 100; $i++) {
-    echo "Hello World\n";
-}for ($i = 0; $i < 100; $i++) {
-    echo "Hello World\n";
-}for ($i = 0; $i < 100; $i++) {
+}
+?><?php
+for ($i = 0; $i < 100; $i++) {
     echo "Hello World\n";
 }
-
+?><?php
+for ($i = 0; $i < 100; $i++) {
+    echo "Hello World\n";
+}
+?><?php
+for ($i = 0; $i < 100; $i++) {
+    echo "Hello World\n";
+}
+?><?php
+for ($i = 0; $i < 100; $i++) {
+    echo "Hello World\n";
+}
+?><?php
+for ($i = 0; $i < 100; $i++) {
+    echo "Hello World\n";
+}
+?><?php
+for ($i = 0; $i < 100; $i++) {
+    echo "Hello World\n";
+}
+?><?php
+for ($i = 0; $i < 100; $i++) {
+    echo "Hello World\n";
+}
+?><?php
+for ($i = 0; $i < 100; $i++) {
+    echo "Hello World\n";
+}
+?><?php
+for ($i = 0; $i < 100; $i++) {
+    echo "Hello World\n";
+}
+?><?php
+for ($i = 0; $i < 100; $i++) {
+    echo "Hello World\n";
+}
+?>
 
 // P: *Drinking tea*
 // D: Where did you get it from?

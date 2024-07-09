@@ -1,13 +1,16 @@
+<?php
 for ($i = 0; $i < 100; $i++) {
     echo "COOKIES\n";
-}for ($i = 0; $i < 100; $i++) {
-    echo "COOKIES\n";
-}for ($i = 0; $i < 100; $i++) {
-    echo "COOKIES\n";
-}for ($i = 0; $i < 100; $i++) {
-    echo "хрум хрум\n";
 }
-
+?><?php
+for ($i = 0; $i < 100; $i++) {
+    echo "COOKIES\n";
+}
+?><?php
+for ($i = 0; $i < 100; $i++) {
+    echo "хрум хрум :3\n";
+}
+?>
 
 // ...
 // ...

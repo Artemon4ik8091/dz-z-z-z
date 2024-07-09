@@ -1,9 +1,12 @@
+<?php
 for ($i = 0; $i < 100; $i++) {
     echo "Hello World\n";
 }
+?><?php
 for ($i = 0; $i < 100; $i++) {
-    echo "JustString\n";
+    echo "sad World\n";
 }
+?>
 
 // D: btw, did you know that I love "Metal Family"?
 // P: No, but I love them too. Did you know they have an album?

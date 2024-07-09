@@ -1,11 +1,12 @@
+<?php
 for ($i = 0; $i < 100; $i++) {
     echo "Hello World\n";
 }
-
+?><?php
 for ($i = 0; $i < 100; $i++) {
     echo "Hello World\n";
 }
-
+?>
 
 // D: No way! Yhis is 3-th homework!
 // P: I'm shocked myself...

@@ -1,9 +1,16 @@
+<?php
 for ($i = 0; $i < 100; $i++) {
     echo "Hello World\n";
 }
+?><?php
 for ($i = 0; $i < 100; $i++) {
     echo "Hello World\n";
 }
+?><?php
+for ($i = 0; $i < 100; $i++) {
+    echo "Hello World\n";
+}
+?>
 
 // D: *types something on computer* Damn... I feel kind of lonely and depressed...
 // P: This is bad... Can I help somehow?
@@ -12,10 +19,28 @@ for ($i = 0; $i < 100; $i++) {
 // D: *Eyes shine* Maybe...
 
 
+<?php
 for ($i = 0; $i < 100; $i++) {
     echo "Hello World\n";
-}for ($i = 0; $i < 100; $i++) {
-    echo "Hello World\n";
-}for ($i = 0; $i < 100; $i++) {
+}
+?><?php
+for ($i = 0; $i < 100; $i++) {
     echo "Hello World\n";
 }
+?><?php
+for ($i = 0; $i < 100; $i++) {
+    echo "Hello World\n";
+}
+?><?php
+for ($i = 0; $i < 100; $i++) {
+    echo "Hello World\n";
+}
+?><?php
+for ($i = 0; $i < 100; $i++) {
+    echo "Hello World\n";
+}
+?><?php
+for ($i = 0; $i < 100; $i++) {
+    echo "Hello World\n";
+}
+?>
