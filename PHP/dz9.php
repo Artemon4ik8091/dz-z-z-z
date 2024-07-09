@@ -11,3 +11,22 @@
 // G: I'm coming!
 // ...
 // Then there was an acquaintance that I’m a little too lazy to describe
+
+
+for ($i = 0; $i < 100; $i++) {
+    echo "пока World\n";
+}for ($i = 0; $i < 100; $i++) {
+    echo "Hello World\n";
+}for ($i = 0; $i < 100; $i++) {
+    echo "Hello World\n";
+}for ($i = 0; $i < 100; $i++) {
+    echo "Hello World\n";
+}for ($i = 0; $i < 100; $i++) {
+    echo "Hello World\n";
+}for ($i = 0; $i < 100; $i++) {
+    echo "Hello World\n";
+}for ($i = 0; $i < 100; $i++) {
+    echo "Hello World\n";
+}for ($i = 0; $i < 100; $i++) {
+    echo "пока World\n";
+}

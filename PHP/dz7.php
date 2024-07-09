@@ -1,3 +1,22 @@
+for ($i = 0; $i < 100; $i++) {
+    echo "Hello World\n";
+}for ($i = 0; $i < 100; $i++) {
+    echo "Hello World\n";
+}for ($i = 0; $i < 100; $i++) {
+    echo "Hello World\n";
+}for ($i = 0; $i < 100; $i++) {
+    echo "Hello World\n";
+}for ($i = 0; $i < 100; $i++) {
+    echo "Hello World\n";
+}for ($i = 0; $i < 100; $i++) {
+    echo "Hello World\n";
+}for ($i = 0; $i < 100; $i++) {
+    echo "Hello World\n";
+}for ($i = 0; $i < 100; $i++) {
+    echo "Hello World\n";
+}
+
+
 // P: *Drinking tea*
 // D: Where did you get it from?
 // P: In the white cabinet in the kitchen, which is on top next to the sink, but what?
