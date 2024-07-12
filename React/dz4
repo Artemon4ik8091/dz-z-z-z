@@ -1,0 +1,206 @@
+<?php
+
+function calculator($num1, $operator, $num2) {
+    switch ($operator) {
+        case '+':
+            return $num1 + $num2;
+        case '-':
+            return $num1 - $num2;
+        case '*':
+            return $num1 * $num2;
+        case '/':
+            if ($num2 == 0) {
+                echo "Error: Division by zero!";
+                exit();
+            }
+            return $num1 / $num2;
+    }
+}
+
+if (isset($_POST['calculate'])) {
+    $num1 = $_POST['num1'];
+    $operator = $_POST['operator'];
+    $num2 = $_POST['num2'];
+
+    $result = calculator($num1, $operator, $num2);
+
+    echo "Result: $result";
+} else {
+?>
+
+<form method="post">
+    <input type="number" name="num1" value="<?php if (isset($_POST['num1'])) { echo $_POST['num1']; } ?>">
+    <select name="operator">
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="*">*</option>
+        <option value="/">/</option>
+    </select>
+    <input type="number" name="num2" value="<?php if (isset($_POST['num2'])) { echo $_POST['num2']; } ?>">
+    <input type="submit" name="calculate" value="Calculate">
+</form>
+
+<?php
+}
+?><?php
+
+function calculator($num1, $operator, $num2) {
+    switch ($operator) {
+        case '+':
+            return $num1 + $num2;
+        case '-':
+            return $num1 - $num2;
+        case '*':
+            return $num1 * $num2;
+        case '/':
+            if ($num2 == 0) {
+                echo "Error: Division by zero!";
+                exit();
+            }
+            return $num1 / $num2;
+    }
+}
+
+if (isset($_POST['calculate'])) {
+    $num1 = $_POST['num1'];
+    $operator = $_POST['operator'];
+    $num2 = $_POST['num2'];
+
+    $result = calculator($num1, $operator, $num2);
+
+    echo "Result: $result";
+} else {
+?>
+
+<form method="post">
+    <input type="number" name="num1" value="<?php if (isset($_POST['num1'])) { echo $_POST['num1']; } ?>">
+    <select name="operator">
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="*">*</option>
+        <option value="/">/</option>
+    </select>
+    <input type="number" name="num2" value="<?php if (isset($_POST['num2'])) { echo $_POST['num2']; } ?>">
+    <input type="submit" name="calculate" value="Calculate">
+</form>
+
+<?php
+}
+?>
+
+// G: Good morning.. I didn’t know you could sing so cool)
+// D: 0_0
+// G: heheh
+// D: Yea?
+// G: угу
+// D: ?
+// G: Yes.. yes.. This means consent in Russian
+// D: Understood
+
+<?php
+
+function calculator($num1, $operator, $num2) {
+    switch ($operator) {
+        case '+':
+            return $num1 + $num2;
+        case '-':
+            return $num1 - $num2;
+        case '*':
+            return $num1 * $num2;
+        case '/':
+            if ($num2 == 0) {
+                echo "Error: Division by zero!";
+                exit();
+            }
+            return $num1 / $num2;
+    }
+}
+
+if (isset($_POST['calculate'])) {
+    $num1 = $_POST['num1'];
+    $operator = $_POST['operator'];
+    $num2 = $_POST['num2'];
+
+    $result = calculator($num1, $operator, $num2);
+
+    echo "Result: $result";
+} else {
+?>
+
+<form method="post">
+    <input type="number" name="num1" value="<?php if (isset($_POST['num1'])) { echo $_POST['num1']; } ?>">
+    <select name="operator">
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="*">*</option>
+        <option value="/">/</option>
+    </select>
+    <input type="number" name="num2" value="<?php if (isset($_POST['num2'])) { echo $_POST['num2']; } ?>">
+    <input type="submit" name="calculate" value="Calculate">
+</form>
+
+<?php
+}
+?>
+<?php
+
+function calculator($num1, $operator, $num2) {
+    switch ($operator) {
+        case '+':
+            return $num1 + $num2;
+        case '-':
+            return $num1 - $num2;
+        case '*':
+            return $num1 * $num2;
+        case '/':
+            if ($num2 == 0) {
+                echo "Error: Division by zero!";
+                exit();
+            }
+            return $num1 / $num2;
+    }
+}
+
+if (isset($_POST['calculate'])) {
+    $num1 = $_POST['num1'];
+    $operator = $_POST['operator'];
+    $num2 = $_POST['num2'];
+
+    $result = calculator($num1, $operator, $num2);
+
+    echo "Result: $result";
+} else {
+?>
+
+<form method="post">
+    <input type="number" name="num1" value="<?php if (isset($_POST['num1'])) { echo $_POST['num1']; } ?>">
+    <select name="operator">
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="*">*</option>
+        <option value="/">/</option>
+    </select>
+    <input type="number" name="num2" value="<?php if (isset($_POST['num2'])) { echo $_POST['num2']; } ?>">
+    <input type="submit" name="calculate" value="Calculate">
+</form>
+
+<?php
+}
+?>
+
+
+// G: What are we doing here?
+// D: I'm watching TV
+// G: *присела рядом* What are you watching?
+// D: Movie. It's called "The Hitman's Bodyguard"
+// G: So cute
+// D: ugu (типо угу, но не понятное и с каким то акцентом.. хз каким, ну вы поняли)
+// G: By the way, you look like a cutie too
+// D: *покраснел немного*
+// G: hehe, I love to embarrass you, and you become even cuter when you are embarrassed ^^
+// D: *покраснел сильнее* o-o-okay..
+// G: hehe *обняла его*
+// D: 0_0 *В мыслях: Okay, she just hugged, nothing happened, but it was a little nice*
+// G: Okay, enjoy watching *чмокнула в щёку* hehe, don't turn into a tomato) 
+// D: *сидит в ступоре*
+// G: Call me if anything happens) *ушла*
