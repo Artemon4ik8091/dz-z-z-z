@@ -1,0 +1,305 @@
+Для создания имитационной модели "причал морских катеров" на Java, вам понадобится использовать различные классы и структуры данных. Ниже приведен общий план программы на Java для заданных требований:
+
+1. Создайте классы Passenger и FerryBoat для представления пассажиров и катеров соответственно.
+
+2. В основном классе (например, Main) определите методы для генерации случайных значений для среднего времени между появлениями пассажиров и катеров в течение дня.
+
+3. Реализуйте логику, которая будет моделировать прибытие пассажиров и катеров на причал в зависимости от времени.
+
+4. Определите среднее время пребывания пассажиров на остановке. Это может быть случайное число в заданном диапазоне.
+
+5. Рассчитайте достаточный интервал времени между прибытиями катеров, чтобы на остановке находилось не более N человек одновременно.
+
+6. Укажите, что количество свободных мест в катере является случайной величиной. Это также может быть реализовано с помощью генерации случайного числа.
+
+7. Не забудьте учесть тип остановки катера (конечная или нет) при имитации движения катера в системе.
+
+8. Создайте методы для вывода результатов моделирования, таких как среднее время пребывания пассажиров, оптимальный интервал времени для прибытия катеров и другие интересные значения.
+
+Это общий план, и конкретная реализация будет зависеть от вашего понимания языка программирования Java и желаемого уровня детализации модели. Не стесняйтесь задавать вопросы, если возникнут трудности при написании кода!
+
+
+
+Для решения данной задачи на Java мы можем использовать принципы объектно-ориентированного программирования. Вот возможная структура программы:
+
+1. Создание класса Passenger с полями:
+   - Среднее время пребывания на остановке
+   - Тип остановки катера (конечная или нет)
+
+2. Создание класса Dock, который представляет причал, с полями:
+   - Среднее время между появлениями пассажиров
+   - Среднее время между появлениями катеров
+   - Метод для определения среднего времени пребывания пассажиров на остановке
+   - Метод для определения достаточного интервала времени между приходами катеров, чтобы на остановке находилось не более N людей одновременно
+
+3. Создание класса Ferry, который представляет катер, с полями:
+   - Количество свободных мест
+   - Метод для генерации случайного количества свободных мест
+
+4. В методе main создаем объекты классов Passenger, Dock и Ferry, устанавливаем необходимые параметры и вызываем методы для расчетов.
+
+5. Используем генераторы случайных чисел для моделирования случайных величин (например, количество свободных мест в катере).
+
+Например, код для класса Passenger может выглядеть так:
+
+```java
+public class Passenger {
+    private double averageStayTime;
+    private boolean terminalStop;
+
+    public Passenger(double averageStayTime, boolean terminalStop) {
+        this.averageStayTime = averageStayTime;
+        this.terminalStop = terminalStop;
+    }
+
+    public double getAverageStayTime() {
+        return averageStayTime;
+    }
+
+    public boolean isTerminalStop() {
+        return terminalStop;
+    }
+}
+```
+
+Таким образом, вы можете разработать программу, моделирующую работу причала морских катеров в соответствии с указанными условиями.
+
+
+
+
+
+
+
+Для практического задания по системе отзывов создайте веб-приложение, которое будет задействовать возможно-
+сти АРІ. Приложение должно позволять пользователю:
+• Показывать отзывы;
+• Искать отзывы;
+• Удалять собственные отзывы;
+• Редактировать собственные отзывы;
+• Регистрация пользователя;
+• Производить вход в систему по логину и паролю.
+• Удаление отзывов;
+• Удаление пользователей;
+• Блокировка пользователей;
+• Добавление пользователей.
+
+
+Для создания веб-приложения на Java для системы отзывов, мы можем использовать Spring Boot для управления бэкэндом приложения. Ниже приведен базовый пример кода с некоторыми основными функциями, такими как регистрация пользователя, аутентификация, добавление, редактирование и удаление отзывов. 
+
+```java
+// Основной класс для запуска приложения
+@SpringBootApplication
+public class ReviewsApplication {
+
+    public static void main(String[] args) {
+        SpringApplication.run(ReviewsApplication.class, args);
+    }
+}
+
+// Модель класса Пользователя
+@Entity
+public class User {
+    
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+    
+    private String username;
+    
+    private String password;
+    
+    // Геттеры и сеттеры
+}
+
+// Репозиторий для работы с пользователями
+@Repository
+public interface UserRepository extends JpaRepository<User, Long> {
+    User findByUsername(String username);
+}
+
+// Контроллер для управления пользователями
+@RestController
+public class UserController {
+    
+    @Autowired
+    private UserRepository userRepository;
+    
+    @PostMapping("/register")
+    public ResponseEntity<String> registerUser(@RequestBody User user) {
+        userRepository.save(user);
+        return ResponseEntity.ok("User registered successfully");
+    }
+    
+    // Другие методы, такие как удаление пользователей, блокировка и т.д.
+}
+
+// Класс для работы с отзывами
+@Entity
+public class Review {
+    
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+    
+    private String content;
+    
+    private Long userId;
+    
+    // Геттеры и сеттеры
+}
+
+// Репозиторий для работы с отзывами
+@Repository
+public interface ReviewRepository extends JpaRepository<Review, Long> {
+    List<Review> findByUserId(Long userId);
+}
+
+// Контроллер для управления отзывами
+@RestController
+public class ReviewController {
+    
+    @Autowired
+    private ReviewRepository reviewRepository;
+    
+    @PostMapping("/reviews")
+    public ResponseEntity<String> addReview(@RequestBody Review review) {
+        reviewRepository.save(review);
+        return ResponseEntity.ok("Review added successfully");
+    }
+    
+    // Другие методы, такие как редактирование и удаление отзывов
+}
+
+// Конфигурация безопасности для аутентификации пользователей
+@Configuration
+@EnableWebSecurity
+public class SecurityConfig extends WebSecurityConfigurerAdapter {
+    
+    @Autowired
+    private UserDetailsService userDetailsService;
+    
+    @Override
+    protected void configure(AuthenticationManagerBuilder auth) throws Exception {
+        auth.userDetailsService(userDetailsService)
+            .passwordEncoder(passwordEncoder());
+    }
+    
+    @Bean
+    public PasswordEncoder passwordEncoder() {
+        return new BCryptPasswordEncoder();
+    }
+}
+
+// Сервис для работы с пользователями
+@Service
+public class UserService implements UserDetailsService {
+    
+    @Autowired
+    private UserRepository userRepository;
+    
+    @Override
+    public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
+        User user = userRepository.findByUsername(username);
+        
+        if (user == null) {
+            throw new UsernameNotFoundException(username);
+        }
+        
+        return new org.springframework.security.core.userdetails.User(user.getUsername(), user.getPassword(), Collections.emptyList());
+    }
+}
+```
+
+Это лишь общая структура приложения на Java для системы отзывов. У вас также должен быть фронтенд для взаимодействия с бэкэндом. Вам также придется добавить больше функциональности, такие как поиск отзывов, удаление отзывов, добавление пользователей и т.д. Надеюсь, этот пример поможет вам начать работу над вашим веб-приложением на Java.
+
+
+
+Напиши код на Java для нахождения в файле всех простых чисел
+
+Конечно, вот пример кода на Java для нахождения всех простых чисел в файле:
+
+```java
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+
+public class PrimeNumberFinder {
+
+    public static void main(String[] args) {
+        String fileName = "numbers.txt";
+
+        try (BufferedReader br = new BufferedReader(new FileReader(fileName))) {
+            String line;
+            while ((line = br.readLine()) != null) {
+                String[] numbers = line.split(" ");
+                for (String number : numbers) {
+                    if (isPrime(Integer.parseInt(number))) {
+                        System.out.println(number + " is a prime number.");
+                    }
+                }
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public static boolean isPrime(int number) {
+        if (number <= 1) {
+            return false;
+        }
+        for (int i = 2; i <= Math.sqrt(number); i++) {
+            if (number % i == 0) {
+                return false;
+            }
+        }
+        return true;
+    }
+}
+```
+
+Прежде чем запустить этот код, убедитесь, что у вас есть файл "numbers.txt" с числами, которые вы хотите проверить на "простоту". Каждое число должно быть разделено пробелом или новой строкой. Данный код читает числа из файла, проверяет их на простоту с помощью метода `isPrime`, и выводит найденные простые числа в консоль.
+
+Напиши код на Java для нахождения в файле факториала каждого числа
+
+
+Конечно, вот пример кода на Java для нахождения факториала каждого числа из файла:
+
+```java
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+
+public class FactorialFinder {
+
+    public static void main(String[] args) {
+        String fileName = "numbers.txt";
+
+        try (BufferedReader br = new BufferedReader(new FileReader(fileName))) {
+            String line;
+            while ((line = br.readLine()) != null) {
+                String[] numbers = line.split(" ");
+                for (String number : numbers) {
+                    int n = Integer.parseInt(number);
+                    long factorial = findFactorial(n);
+                    System.out.println("Factorial of " + n + " is: " + factorial);
+                }
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public static long findFactorial(int n) {
+        if (n == 0) {
+            return 1;
+        }
+        long factorial = 1;
+        for (int i = 1; i <= n; i++) {
+            factorial *= i;
+        }
+        return factorial;
+    }
+}
+```
+
+Прежде чем запустить этот код, убедитесь, что у вас есть файл "numbers.txt" с числами, для которых вы хотите найти факториал. Каждое число должно быть разделено пробелом или новой строкой. Данный код читает числа из файла, находит факториал каждого числа с помощью метода `findFactorial`, и выводит результат в консоль.
